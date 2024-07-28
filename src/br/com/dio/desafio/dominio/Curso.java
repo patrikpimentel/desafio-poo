@@ -1,8 +1,12 @@
 package br.com.dio.desafio.dominio;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Curso extends Conteudo{
 
     private int cargaHoraria;
+    private List<Aula> aulas;
 
     @Override
     public double calcularXp() {
@@ -10,6 +14,7 @@ public class Curso extends Conteudo{
     }
 
     public Curso() {
+	aulas = new ArrayList<>();
     }
 
 
@@ -19,6 +24,16 @@ public class Curso extends Conteudo{
 
     public void setCargaHoraria(int cargaHoraria) {
         this.cargaHoraria = cargaHoraria;
+    }
+    
+    
+
+    public List<Aula> getAulas() {
+        return aulas;
+    }
+
+    public void addAulas(List<Aula> aulas) {
+        this.aulas.addAll(aulas);
     }
 
     @Override
